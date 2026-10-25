@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Petr Lapáček | Řešitel problémů výrobních firem</title>
+    <title>Petr Lapáček | Řešitel problémů firem</title>
     <meta
       name="description"
       content="Pomáhám firmám odhalit a odstranit problémy v logistice, výrobě a digitalizaci. Audit procesů, ERP, digitalizace, optimalizace výroby a interim management."
@@ -1317,15 +1317,14 @@
     <div class="section-heading">
       <span class="eyebrow">Kontakt</span>
       <h2>Nezávazně se ozvěte</h2>
-      <p>
-        Napište mi zprávu a ozvu se vám co nejdříve.
-      </p>
+      <p>Napište mi zprávu a ozvu se vám co nejdříve.</p>
     </div>
 
     <form id="contactForm" class="contact-form" method="POST">
       <input type="hidden" name="_captcha" value="false" />
       <input type="hidden" name="_subject" value="Nová zpráva z webu Petr Lapáček" />
       <input type="hidden" name="_template" value="table" />
+      <input type="hidden" name="_cc" id="cc-email" value="" />
 
       <div class="form-row">
         <label>
@@ -1337,19 +1336,14 @@
       <div class="form-row">
         <label>
           <span>E-mail</span>
-          <input type="email" name="email" placeholder="vas@email.cz" required />
+          <input type="email" name="email" id="user-email" placeholder="vas@email.cz" required />
         </label>
       </div>
 
       <div class="form-row">
         <label>
           <span>Text</span>
-          <textarea
-            name="message"
-            rows="6"
-            placeholder="Napište mi, v čem vám mohu pomoci..."
-            required
-          ></textarea>
+          <textarea name="message" rows="6" placeholder="Napište mi, v čem vám mohu pomoci..." required></textarea>
         </label>
       </div>
 
@@ -1365,10 +1359,7 @@
     <button class="modal-close" type="button" aria-label="Zavřít">×</button>
     <div class="modal-icon">✓</div>
     <h3>Děkuji za zprávu</h3>
-    <p>
-      Vaše e-mailová zpráva byla úspěšně odeslána.<br />
-      Ozvu se vám co nejdříve.
-    </p>
+    <p>Vaše e-mailová zpráva byla úspěšně odeslána.<br>Kopie byla zaslána i na vámi uvedený e-mail.</p>
     <button type="button" class="btn btn-primary modal-ok">OK</button>
   </div>
 </div>
@@ -1413,7 +1404,6 @@
     padding: 15px 16px;
     font: inherit;
     color: var(--text);
-    transition: border-color 0.2s ease, box-shadow 0.2s ease;
   }
 
   .contact-form input:focus,
@@ -1432,9 +1422,23 @@
     margin-top: 24px;
   }
 
-  .contact-form .btn {
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 52px;
+    padding: 0 24px;
+    border-radius: 999px;
+    border: 1px solid transparent;
+    font-weight: 700;
+    transition: 0.2s ease;
     cursor: pointer;
-    border: none;
+  }
+
+  .btn-primary {
+    background: var(--primary);
+    color: #fff;
+    box-shadow: var(--shadow);
   }
 
   .modal {
@@ -1481,7 +1485,7 @@
     margin: 0 auto 18px;
     border-radius: 50%;
     background: #eaf8ef;
-    color: var(--success);
+    color: #1d8d58;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -1501,17 +1505,9 @@
     line-height: 1.6;
   }
 
-  .modal .btn {
-    min-width: 120px;
-  }
-
   @media (max-width: 640px) {
     .contact-form {
       padding: 22px 18px;
-    }
-
-    .modal-content {
-      padding: 28px 20px 22px;
     }
   }
 </style>
@@ -1519,18 +1515,14 @@
 <script>
   const form = document.getElementById("contactForm");
   const modal = document.getElementById("successModal");
+  const emailInput = document.getElementById("user-email");
+  const ccInput = document.getElementById("cc-email");
   const modalClose = document.querySelector(".modal-close");
   const modalOk = document.querySelector(".modal-ok");
 
-  function closeModal() {
-    modal.classList.remove("is-visible");
-    modal.setAttribute("aria-hidden", "true");
-  }
-
-  function openModal() {
-    modal.classList.add("is-visible");
-    modal.setAttribute("aria-hidden", "false");
-  }
+  emailInput.addEventListener("input", function () {
+    ccInput.value = emailInput.value.trim();
+  });
 
   form.addEventListener("submit", async function (event) {
     event.preventDefault();
@@ -1541,9 +1533,9 @@
     submitBtn.disabled = true;
     submitBtn.textContent = "Odesílá se...";
 
-    const formData = new FormData(form);
-
     try {
+      const formData = new FormData(form);
+
       const response = await fetch("https://formsubmit.co/ajax/lapacek.petr@gmail.com", {
         method: "POST",
         headers: {
@@ -1553,31 +1545,35 @@
       });
 
       if (!response.ok) {
-        throw new Error("Odeslání se nezdařilo.");
+        throw new Error("Chyba odesílání");
       }
 
       form.reset();
-      openModal();
+      ccInput.value = "";
+      modal.classList.add("is-visible");
+      modal.setAttribute("aria-hidden", "false");
     } catch (error) {
-      alert("Při odesílání zprávy nastala chyba. Zkuste to prosím znovu nebo mi napište přímo na lapacek.petr@gmail.com.");
+      alert("Při odesílání zprávy nastala chyba. Zkuste to prosím znovu.");
     } finally {
       submitBtn.disabled = false;
       submitBtn.textContent = originalText;
     }
   });
 
-  modalClose.addEventListener("click", closeModal);
-  modalOk.addEventListener("click", closeModal);
+  modalClose.addEventListener("click", () => {
+    modal.classList.remove("is-visible");
+    modal.setAttribute("aria-hidden", "true");
+  });
+
+  modalOk.addEventListener("click", () => {
+    modal.classList.remove("is-visible");
+    modal.setAttribute("aria-hidden", "true");
+  });
 
   modal.addEventListener("click", function (event) {
     if (event.target === modal) {
-      closeModal();
-    }
-  });
-
-  document.addEventListener("keydown", function (event) {
-    if (event.key === "Escape" && modal.classList.contains("is-visible")) {
-      closeModal();
+      modal.classList.remove("is-visible");
+      modal.setAttribute("aria-hidden", "true");
     }
   });
 </script>
