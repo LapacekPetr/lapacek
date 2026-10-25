@@ -3,140 +3,142 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Lapáček Consulting</title>
+    <title>Petr Lapáček | Poradenství, analýzy a mentoring</title>
     <meta
       name="description"
-      content="Poradenství, analýzy a mentorování pro podnikatele, vedení a zaměstnance. Pomoc při rozhodování, ERP a procesních změnách."
+      content="Petr Lapáček – poradenství, analýzy procesů, ERP, mentoring zaměstnanců a podpora při podnikatelských rozhodnutích."
     />
     <style>
       :root {
-        --primary: #123a5a;
-        --primary-light: #285d8a;
-        --accent: #d7a74a;
-        --bg: #f4f7fb;
-        --white: #ffffff;
-        --text: #1e2b3a;
-        --muted: #5f6f83;
-        --border: #e5ebf2;
-        --shadow: 0 18px 45px rgba(18, 58, 90, 0.12);
+        --primary: #143d63;
+        --primary-2: #275d8d;
+        --accent: #d2a24a;
+        --bg: #f3f7fb;
+        --panel: #ffffff;
+        --text: #1d2a38;
+        --muted: #5f6f85;
+        --line: #e4ebf3;
+        --success: #1d8d58;
+        --shadow: 0 18px 45px rgba(15, 35, 52, 0.12);
       }
 
       * { box-sizing: border-box; }
       html { scroll-behavior: smooth; }
       body {
         margin: 0;
-        font-family: Arial, Helvetica, sans-serif;
-        background: var(--bg);
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
         color: var(--text);
+        background: var(--bg);
         line-height: 1.6;
       }
 
-      img { max-width: 100%; display: block; }
       a { color: inherit; text-decoration: none; }
+      img { max-width: 100%; display: block; }
 
       .container {
-        width: min(1120px, calc(100% - 32px));
+        width: min(1160px, calc(100% - 32px));
         margin: 0 auto;
+      }
+
+      .btn {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 52px;
+        padding: 0 24px;
+        border-radius: 999px;
+        border: 1px solid transparent;
+        font-weight: 700;
+        transition: 0.2s ease;
+      }
+
+      .btn-primary {
+        background: var(--primary);
+        color: #fff;
+        box-shadow: var(--shadow);
+      }
+
+      .btn-primary:hover {
+        background: var(--primary-2);
+      }
+
+      .btn-light {
+        background: #fff;
+        border-color: var(--line);
+        color: var(--primary);
+      }
+
+      .eyebrow {
+        display: inline-block;
+        background: #eaf1fb;
+        color: var(--primary);
+        border-radius: 999px;
+        padding: 0.45rem 0.8rem;
+        font-size: 0.74rem;
+        letter-spacing: 0.06em;
+        text-transform: uppercase;
+        font-weight: 800;
       }
 
       header {
         position: sticky;
         top: 0;
-        z-index: 100;
-        background: rgba(255, 255, 255, 0.94);
-        backdrop-filter: blur(10px);
-        border-bottom: 1px solid var(--border);
+        z-index: 20;
+        background: rgba(255, 255, 255, 0.92);
+        backdrop-filter: blur(8px);
+        border-bottom: 1px solid var(--line);
       }
 
       .nav {
-        min-height: 76px;
         display: flex;
         justify-content: space-between;
         align-items: center;
+        min-height: 78px;
       }
 
       .brand {
-        font-size: 1.25rem;
+        font-size: 1.2rem;
         font-weight: 800;
         letter-spacing: 0.04em;
       }
 
       .brand span {
-        color: var(--primary-light);
+        color: var(--primary-2);
       }
 
       .nav-links {
         display: flex;
         align-items: center;
-        gap: 28px;
+        gap: 26px;
         color: var(--muted);
         font-weight: 700;
       }
 
       .nav-links a:hover { color: var(--primary); }
 
-      .btn {
-        display: inline-flex;
-        align-items: center;
-        justify-content: center;
-        padding: 0.9rem 1.5rem;
-        border-radius: 999px;
-        font-weight: 700;
-        transition: 0.2s ease;
-        border: 1px solid transparent;
-      }
-
-      .btn-primary {
-        background: var(--primary);
-        color: var(--white);
-        box-shadow: var(--shadow);
-      }
-
-      .btn-primary:hover {
-        background: var(--primary-light);
-      }
-
-      .btn-light {
-        background: var(--white);
-        color: var(--primary);
-        border-color: var(--border);
-      }
-
       .hero {
-        background: linear-gradient(135deg, #eef5ff 0%, #f8fbff 100%);
-        padding: 84px 0 62px;
+        background: linear-gradient(135deg, #eff6ff 0%, #f8fbff 100%);
+        padding: 72px 0 54px;
       }
 
       .hero-grid {
         display: grid;
-        grid-template-columns: 1.2fr 0.8fr;
+        grid-template-columns: 1.1fr 0.9fr;
         align-items: center;
-        gap: 42px;
-      }
-
-      .eyebrow {
-        display: inline-block;
-        padding: 0.45rem 0.8rem;
-        border-radius: 999px;
-        background: #eaf1fb;
-        color: var(--primary);
-        font-size: 0.76rem;
-        font-weight: 800;
-        letter-spacing: 0.06em;
-        text-transform: uppercase;
+        gap: 46px;
       }
 
       h1 {
-        margin: 18px 0 18px;
-        font-size: clamp(2.6rem, 5vw, 4.4rem);
-        line-height: 1.07;
-        letter-spacing: -0.05em;
+        margin: 18px 0 20px;
+        font-size: clamp(2.7rem, 4vw, 4.8rem);
+        line-height: 1.04;
+        letter-spacing: -0.06em;
       }
 
       .hero p {
+        max-width: 620px;
         font-size: 1.08rem;
         color: var(--muted);
-        max-width: 620px;
       }
 
       .hero-actions {
@@ -149,73 +151,66 @@
       .stats {
         display: grid;
         grid-template-columns: repeat(3, minmax(120px, 1fr));
-        gap: 16px;
-        margin-top: 34px;
+        gap: 18px;
+        margin-top: 32px;
       }
 
       .stat {
         background: rgba(255,255,255,0.7);
-        border: 1px solid var(--border);
+        border: 1px solid var(--line);
         border-radius: 18px;
         padding: 20px 18px;
       }
 
       .stat strong {
         display: block;
-        color: var(--primary);
         font-size: 1.7rem;
+        color: var(--primary);
       }
 
       .stat span {
+        font-size: 0.9rem;
         color: var(--muted);
-        font-size: 0.92rem;
       }
 
-      .hero-card {
-        background: var(--white);
-        border: 1px solid var(--border);
-        border-radius: 28px;
+      .portrait-box {
+        border-radius: 32px;
+        overflow: hidden;
+        position: relative;
+        background: #dfeaf5;
+        border: 1px solid var(--line);
         box-shadow: var(--shadow);
-        padding: 26px;
       }
 
-      .mini-panel {
-        background: linear-gradient(160deg, var(--primary) 0%, var(--primary-light) 100%);
-        color: var(--white);
-        border-radius: 22px;
-        padding: 24px;
-        margin-bottom: 18px;
+      .portrait {
+        min-height: 760px;
+        background-image: url('https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=900&q=80');
+        background-size: cover;
+        background-position: center;
       }
 
-      .mini-panel h3 {
-        margin: 0 0 12px;
-        font-size: 1.2rem;
+      .badge {
+        position: absolute;
+        left: 22px;
+        bottom: 22px;
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        background: rgba(20, 61, 99, 0.92);
+        color: #fff;
+        border-radius: 999px;
+        padding: 0.9rem 1.15rem;
+        font-weight: 700;
+        box-shadow: var(--shadow);
       }
 
-      .mini-list {
-        list-style: none;
-        padding: 0;
-        margin: 0;
-      }
-
-      .mini-list li {
-        padding: 8px 0;
-        border-bottom: 1px solid rgba(255,255,255,0.18);
-      }
-
-      .mini-list li:last-child { border-bottom: none; }
-
-      .info-box {
-        background: #fbfcff;
-        border: 1px solid var(--border);
-        border-radius: 18px;
-        padding: 20px 18px;
-      }
-
-      .info-box strong {
-        display: block;
-        color: var(--primary);
-        margin-bottom: 8px;
+      .badge::before {
+        content: "";
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        background: #5fd28f;
+        display: inline-block;
       }
 
       section {
@@ -224,12 +219,12 @@
 
       .section-heading {
         max-width: 760px;
-        margin-bottom: 38px;
+        margin-bottom: 36px;
       }
 
       .section-heading h2 {
-        margin: 8px 0 12px;
-        font-size: clamp(2rem, 3vw, 3rem);
+        margin: 12px 0 10px;
+        font-size: clamp(2rem, 2.8vw, 3rem);
         line-height: 1.15;
         letter-spacing: -0.04em;
       }
@@ -247,8 +242,8 @@
       }
 
       .about-card {
-        background: var(--white);
-        border: 1px solid var(--border);
+        background: var(--panel);
+        border: 1px solid var(--line);
         border-radius: 24px;
         box-shadow: var(--shadow);
         padding: 28px;
@@ -268,16 +263,17 @@
       }
 
       .check {
-        width: 18px;
-        height: 18px;
+        width: 20px;
+        height: 20px;
         border-radius: 50%;
-        background: #e9f7ee;
-        color: #1d8d58;
+        background: #eaf8ef;
+        color: var(--success);
+        font-size: 0.9rem;
+        font-weight: 900;
         display: inline-flex;
         align-items: center;
         justify-content: center;
-        font-weight: 800;
-        margin-top: 3px;
+        margin-top: 4px;
         flex-shrink: 0;
       }
 
@@ -288,22 +284,22 @@
       }
 
       .service-card {
-        background: var(--white);
-        border: 1px solid var(--border);
+        background: var(--panel);
+        border: 1px solid var(--line);
         border-radius: 22px;
         padding: 26px 22px;
         box-shadow: 0 8px 24px rgba(17, 26, 38, 0.04);
       }
 
       .service-icon {
-        width: 56px;
-        height: 56px;
+        width: 58px;
+        height: 58px;
+        border-radius: 18px;
         display: flex;
         align-items: center;
         justify-content: center;
-        background: #edf3ff;
         color: var(--primary);
-        border-radius: 16px;
+        background: #edf4ff;
         font-weight: 800;
         font-size: 1.5rem;
         margin-bottom: 18px;
@@ -311,7 +307,7 @@
 
       .service-card h3 {
         margin: 0 0 10px;
-        font-size: 1.2rem;
+        font-size: 1.18rem;
       }
 
       .service-card p {
@@ -320,7 +316,7 @@
       }
 
       .process {
-        background: linear-gradient(180deg, #f3f7fc 0%, #ecf4ff 100%);
+        background: linear-gradient(180deg, #f1f7fd 0%, #edf5ff 100%);
       }
 
       .steps {
@@ -330,8 +326,8 @@
       }
 
       .step {
-        background: var(--white);
-        border: 1px solid var(--border);
+        background: var(--panel);
+        border: 1px solid var(--line);
         border-radius: 20px;
         padding: 26px 22px;
       }
@@ -341,12 +337,12 @@
         height: 42px;
         border-radius: 50%;
         background: var(--primary);
-        color: var(--white);
+        color: #fff;
         display: flex;
         align-items: center;
         justify-content: center;
-        font-weight: 700;
-        margin-bottom: 14px;
+        font-weight: 800;
+        margin-bottom: 16px;
       }
 
       .step h3 {
@@ -360,30 +356,30 @@
       }
 
       .quote-box {
-        background: var(--primary);
-        color: var(--white);
+        background: linear-gradient(135deg, var(--primary) 0%, var(--primary-2) 100%);
+        color: #fff;
         border-radius: 26px;
-        padding: 36px 30px;
         box-shadow: var(--shadow);
+        padding: 36px 30px;
       }
 
       .quote-box p {
         margin: 0 0 18px;
-        font-size: clamp(1.1rem, 2vw, 1.55rem);
+        font-size: clamp(1.12rem, 2vw, 1.5rem);
         line-height: 1.5;
       }
 
       .quote-box small {
-        opacity: 0.9;
+        opacity: 0.85;
       }
 
       .cta {
-        background: linear-gradient(135deg, #ffffff 0%, #eef5ff 100%);
+        background: linear-gradient(135deg, #fff 0%, #edf5ff 100%);
       }
 
       .cta-box {
-        background: var(--white);
-        border: 1px solid var(--border);
+        background: var(--panel);
+        border: 1px solid var(--line);
         border-radius: 24px;
         box-shadow: var(--shadow);
         padding: 32px;
@@ -395,8 +391,8 @@
 
       .cta-box h3 {
         margin: 0 0 8px;
-        font-size: clamp(1.8rem, 3vw, 2.5rem);
-        letter-spacing: -0.04em;
+        font-size: clamp(1.7rem, 3vw, 2.5rem);
+        letter-spacing: -0.05em;
       }
 
       .cta-box p {
@@ -405,8 +401,8 @@
       }
 
       footer {
-        background: #0f1e2c;
-        color: #dfebf7;
+        background: #0f1d2e;
+        color: #dfeaf8;
         padding: 32px 0;
       }
 
@@ -414,8 +410,8 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
-        gap: 20px;
         flex-wrap: wrap;
+        gap: 18px;
       }
 
       .footer-links {
@@ -424,13 +420,12 @@
         flex-wrap: wrap;
       }
 
-      .footer-links a { color: #dfebf7; }
-
       @media (max-width: 980px) {
         .hero-grid,
         .about-grid,
         .services-grid,
-        .steps {
+        .steps,
+        .cta-box {
           grid-template-columns: 1fr;
         }
 
@@ -444,7 +439,6 @@
 
         .cta-box {
           display: grid;
-          grid-template-columns: 1fr;
         }
       }
 
@@ -452,20 +446,20 @@
         .nav {
           flex-wrap: wrap;
           justify-content: center;
-          gap: 12px;
           padding: 14px 0;
+          gap: 8px 14px;
         }
 
         .nav-links {
           width: 100%;
           justify-content: center;
           flex-wrap: wrap;
-          gap: 12px 18px;
+          gap: 10px 18px;
           font-size: 0.92rem;
         }
 
         .hero {
-          padding-top: 48px;
+          padding-top: 40px;
         }
 
         .hero-actions {
@@ -483,9 +477,8 @@
           grid-template-columns: 1fr;
         }
 
-        .footer-wrap {
-          flex-direction: column;
-          align-items: flex-start;
+        .portrait {
+          min-height: 500px;
         }
       }
     </style>
@@ -493,7 +486,7 @@
   <body>
     <header>
       <div class="container nav">
-        <a href="#top" class="brand">Lapáček <span>Consulting</span></a>
+        <a href="#top" class="brand">Petr <span>Lapáček</span></a>
         <nav class="nav-links">
           <a href="#o-mne">O mně</a>
           <a href="#sluzby">Služby</a>
@@ -508,12 +501,12 @@
       <section class="hero">
         <div class="container hero-grid">
           <div>
-            <span class="eyebrow">Poradenství · Analýzy · Mentorování</span>
+            <span class="eyebrow">Poradenství • Analýzy • Mentoring</span>
             <h1>Pomáhám firmám rozhodovat správně.</h1>
             <p>
-              Pomáhám podnikatelům, vedení i zaměstnancům s důležitými rozhodnutími,
-              procesními změnami, výběrem digitálních nástrojů a zlepšováním
-              fungování společnosti.
+              Jsem Petr Lapáček a pomáhám podnikatelům, vedení i zaměstnancům řešit
+              kritická rozhodnutí, zlepšovat procesy, vyhodnocovat možnosti ERP a
+              podporovat změny, které přinášejí výsledek.
             </p>
 
             <div class="hero-actions">
@@ -524,35 +517,22 @@
             <div class="stats">
               <div class="stat">
                 <strong>ERP</strong>
-                <span>Výběr a implementace</span>
+                <span>Výběr a nasazení</span>
               </div>
               <div class="stat">
                 <strong>Analýza</strong>
-                <span>Procesy a rozhodování</span>
+                <span>Procesy a data</span>
               </div>
               <div class="stat">
                 <strong>Mentor</strong>
-                <span>Podpora zaměstnanců</span>
+                <span>Rozvoj lidí</span>
               </div>
             </div>
           </div>
 
-          <div class="hero-card">
-            <div class="mini-panel">
-              <h3>Co řeším</h3>
-              <ul class="mini-list">
-                <li>Výběr a nasazení ERP</li>
-                <li>Procesní analýzy</li>
-                <li>Rozvoj zaměstnanců</li>
-                <li>Podpora podnikatelských rozhodnutí</li>
-              </ul>
-            </div>
-
-            <div class="info-box">
-              <strong>Pro koho pracuji</strong>
-              Firmy, které chtějí zlepšit rozhodování, sjednotit procesy,
-              zefektivnit činnost a připravit zaměstnance na změny.
-            </div>
+          <div class="portrait-box">
+            <div class="portrait" aria-label="Portrét Petra Lapáčka"></div>
+            <div class="badge">Konzultace a podpora</div>
           </div>
         </div>
       </section>
@@ -561,12 +541,11 @@
         <div class="container about-grid">
           <div class="section-heading">
             <span class="eyebrow">O mně</span>
-            <h2>Praktická podpora pro podniky i jejich lidi.</h2>
+            <h2>Praktická podpora pro firmy, vedení i lidi.</h2>
             <p>
-              Pomáhám firmám najít správné řešení tam, kde je potřeba
-              porozumět procesu, identifikovat problémy a rozhodnout se
-              správně. Mým přístupem je kombinace analýzy, zkušenosti a
-              činného poradenství pro konkrétní obchodní situace.
+              Pomáhám firmám najít správné řešení v situacích, kdy je potřeba přesně
+              pochopit proces, odhalit slabá místa a rozhodnout se správně. Můj přístup
+              spojuje analýzu, poradenství a podporu při realizaci změn.
             </p>
           </div>
 
@@ -574,19 +553,19 @@
             <ul>
               <li>
                 <span class="check">✓</span>
-                <span>Poradenství vedení i managementu při klíčových rozhodnutích.</span>
+                <span>Poradenství vedení při důležitých rozhodnutích a organizačních změnách.</span>
               </li>
               <li>
                 <span class="check">✓</span>
-                <span>Analýza procesů a návrh zlepšení pro větší efektivitu.</span>
+                <span>Analýza procesů, pracovišť a podnikatelských potřeb ve firmě.</span>
               </li>
               <li>
                 <span class="check">✓</span>
-                <span>Pomoc při výběru a nasazení ERP a dalších digitálních nástrojů.</span>
+                <span>Pomoc při výběru ERP a dalších digitálních nástrojů pro efektivitu.</span>
               </li>
               <li>
                 <span class="check">✓</span>
-                <span>Mentoring zaměstnanců a podpora při změnách v organizaci.</span>
+                <span>Mentoring zaměstnanců a podpora při rozvoji nové pracovní kultury.</span>
               </li>
             </ul>
           </div>
@@ -597,7 +576,7 @@
         <div class="container">
           <div class="section-heading">
             <span class="eyebrow">Služby</span>
-            <h2>Co vám mohu pomoci řešit.</h2>
+            <h2>Co mohu pro vaši firmu řešit.</h2>
           </div>
 
           <div class="services-grid">
@@ -605,8 +584,8 @@
               <div class="service-icon">01</div>
               <h3>Poradenství</h3>
               <p>
-                Podpora vedení při strategických rozhodnutích, organizačních
-                změnách a hledání optimálních řešení.
+                Podpora vedení při strategických rozhodnutích, změnách a hledání
+                optimálních řešení pro konkrétní podnikatelské situace.
               </p>
             </div>
 
@@ -614,17 +593,17 @@
               <div class="service-icon">02</div>
               <h3>Analýzy</h3>
               <p>
-                Detailní analýza procesů, operací a současného stavu s cílem
+                Detailní rozbor procesů, pracovních postupů a současného stavu s cílem
                 odhalit slabá místa a příležitosti ke zlepšení.
               </p>
             </div>
 
             <div class="service-card">
               <div class="service-icon">03</div>
-              <h3>ERP & digitální nástroje</h3>
+              <h3>ERP & nástroje</h3>
               <p>
-                Pomoc při výběru, posouzení a plánování nasazení systémů,
-                které podpoří efektivitu a kontrolu.
+                Pomoc při výběru, posouzení a plánování nasazení ERP a dalších systémů,
+                které podporují kontrolu, efektivitu a růst.
               </p>
             </div>
 
@@ -632,8 +611,8 @@
               <div class="service-icon">04</div>
               <h3>Mentoring</h3>
               <p>
-                Rozvoj zaměstnanců, podpora při změnách a pomoc při budování
-                lepších pracovních návyků a procesů.
+                Rozvoj zaměstnanců, podpora při změnách a pomoc při vytváření lepšího
+                pracovního prostředí a procesních návyků.
               </p>
             </div>
           </div>
@@ -651,25 +630,25 @@
             <div class="step">
               <div class="step-number">1</div>
               <h3>Vstupní rozhovor</h3>
-              <p>Vyslechnu vaši situaci, cíle a konkrétní problém.</p>
+              <p>Vyslechnu vaši situaci, cíle, problémy a konkrétní očekávání.</p>
             </div>
 
             <div class="step">
               <div class="step-number">2</div>
               <h3>Analýza</h3>
-              <p>Prozkoumám procesy, potřeby a možnosti řešení.</p>
+              <p>Prozkoumám procesy, potřeby a možnosti řešení ve vaší firmě.</p>
             </div>
 
             <div class="step">
               <div class="step-number">3</div>
               <h3>Návrh řešení</h3>
-              <p>Navrhuji praktické kroky a doporučení pro konkrétní situaci.</p>
+              <p>Navrhuji praktický plán a konkrétní doporučení pro rozhodnutí.</p>
             </div>
 
             <div class="step">
               <div class="step-number">4</div>
               <h3>Podpora</h3>
-              <p>Pomohu s realizací, koordinací a dalším rozvojem.</p>
+              <p>Pomohu s realizací změn, koordinací a dalším rozvojem.</p>
             </div>
           </div>
         </div>
@@ -679,8 +658,8 @@
         <div class="container">
           <div class="quote-box">
             <p>
-              “Nejde jen o technologie, ale o správné rozhodování, procesy
-              a lidský rozvoj. To je to, co firmám skutečně pomáhá růst.”
+              „Nejde jen o technologie, ale o správné rozhodování, procesy a lidský rozvoj.
+              Právě to firmám skutečně pomáhá růst.“
             </p>
             <small>— Petr Lapáček</small>
           </div>
@@ -691,12 +670,10 @@
         <div class="container">
           <div class="cta-box">
             <div>
-              <h3>Potřebujete pomoct s rozhodnutím nebo procesem?</h3>
+              <h3>Potřebujete poradit s rozhodnutím nebo procesem?</h3>
               <p>Domluvme si nezávaznou konzultaci a projdeme vaši situaci.</p>
             </div>
-            <a href="mailto:lapacek.petr@gmail.com" class="btn btn-primary">
-              lapacek.petr@gmail.com
-            </a>
+            <a href="mailto:lapacek.petr@gmail.com" class="btn btn-primary">lapacek.petr@gmail.com</a>
           </div>
         </div>
       </section>
@@ -704,7 +681,7 @@
 
     <footer>
       <div class="container footer-wrap">
-        <div>© 2025 Lapáček Consulting</div>
+        <div>© 2025 Petr Lapáček</div>
         <div class="footer-links">
           <a href="#o-mne">O mně</a>
           <a href="#sluzby">Služby</a>
