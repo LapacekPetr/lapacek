@@ -273,6 +273,7 @@
         color: var(--muted);
       }
 
+<<<<<<< HEAD
       .results-grid {
         display: grid;
         grid-template-columns: repeat(5, minmax(180px, 1fr));
@@ -341,6 +342,8 @@
         font-weight: 600;
       }
 
+=======
+>>>>>>> parent of 26ee834 (Rozšíření webu o sekce Výsledky, projekty, pro koho pracuji, FAQ a rozšířený ceník)
       .problem-grid {
         display: grid;
         grid-template-columns: repeat(3, minmax(230px, 1fr));
@@ -374,50 +377,6 @@
 
       .problem-card li:last-child {
         border-bottom: none;
-      }
-
-      .projects-grid {
-        display: grid;
-        grid-template-columns: repeat(2, minmax(260px, 1fr));
-        gap: 22px;
-      }
-
-      .project-card {
-        background: var(--panel);
-        border: 1px solid var(--line);
-        border-radius: 22px;
-        padding: 26px 24px;
-        box-shadow: 0 8px 20px rgba(17, 26, 38, 0.04);
-      }
-
-      .project-card h3 {
-        margin: 0 0 10px;
-        font-size: 1.2rem;
-      }
-
-      .project-card p {
-        margin: 0;
-        color: var(--muted);
-      }
-
-      .audience-grid {
-        display: grid;
-        grid-template-columns: repeat(5, minmax(160px, 1fr));
-        gap: 16px;
-      }
-
-      .audience-pill {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        min-height: 88px;
-        border-radius: 18px;
-        background: var(--panel);
-        border: 1px solid var(--line);
-        color: var(--text);
-        font-weight: 700;
-        text-align: center;
-        padding: 16px;
       }
 
       .services-grid {
@@ -500,7 +459,7 @@
 
       .pricing-grid {
         display: grid;
-        grid-template-columns: repeat(4, minmax(220px, 1fr));
+        grid-template-columns: repeat(3, minmax(240px, 1fr));
         gap: 22px;
       }
 
@@ -533,14 +492,14 @@
 
       .price-card h3 {
         margin: 12px 0 10px;
-        font-size: 1.18rem;
+        font-size: 1.26rem;
       }
 
       .price {
         margin: 8px 0 18px;
-        font-size: 1.8rem;
+        font-size: 2rem;
         font-weight: 800;
-        letter-spacing: -0.05em;
+        letter-spacing: -0.06em;
       }
 
       .price small {
@@ -569,10 +528,29 @@
         border-bottom: none;
       }
 
+<<<<<<< HEAD
       .cta-grid {
         display: grid;
         grid-template-columns: repeat(3, minmax(220px, 1fr));
         gap: 22px;
+=======
+      .quote-box {
+        background: linear-gradient(135deg, var(--primary) 0%, var(--primary-2) 100%);
+        border-radius: 26px;
+        padding: 30px 26px;
+        color: #fff;
+        box-shadow: var(--shadow);
+      }
+
+      .quote-box p {
+        margin: 0 0 16px;
+        font-size: clamp(1.1rem, 2vw, 1.55rem);
+        line-height: 1.5;
+      }
+
+      .quote-box small {
+        opacity: 0.9;
+>>>>>>> parent of 26ee834 (Rozšíření webu o sekce Výsledky, projekty, pro koho pracuji, FAQ a rozšířený ceník)
       }
 
       .cta-box {
@@ -647,25 +625,35 @@
 
       @media (max-width: 980px) {
         .hero-grid,
+<<<<<<< HEAD
         .issue-list,
+=======
+>>>>>>> parent of 26ee834 (Rozšíření webu o sekce Výsledky, projekty, pro koho pracuji, FAQ a rozšířený ceník)
         .problem-grid,
-        .projects-grid,
-        .audience-grid,
         .services-grid,
         .steps,
         .pricing-grid,
+<<<<<<< HEAD
         .cta-grid,
         .faq-list,
         .results-grid,
+=======
+>>>>>>> parent of 26ee834 (Rozšíření webu o sekce Výsledky, projekty, pro koho pracuji, FAQ a rozšířený ceník)
         .cta-box {
           grid-template-columns: 1fr;
         }
 
+<<<<<<< HEAD
         .projects-grid,
         .audience-grid,
         .services-grid,
         .pricing-grid,
         .results-grid {
+=======
+        .problem-grid,
+        .services-grid,
+        .pricing-grid {
+>>>>>>> parent of 26ee834 (Rozšíření webu o sekce Výsledky, projekty, pro koho pracuji, FAQ a rozšířený ceník)
           grid-template-columns: repeat(2, minmax(220px, 1fr));
         }
 
@@ -708,16 +696,21 @@
         }
 
         .stat-strip,
+<<<<<<< HEAD
         .issue-list,
+=======
+>>>>>>> parent of 26ee834 (Rozšíření webu o sekce Výsledky, projekty, pro koho pracuji, FAQ a rozšířený ceník)
         .problem-grid,
-        .projects-grid,
-        .audience-grid,
         .services-grid,
         .steps,
+<<<<<<< HEAD
         .pricing-grid,
         .cta-grid,
         .faq-list,
         .results-grid {
+=======
+        .pricing-grid {
+>>>>>>> parent of 26ee834 (Rozšíření webu o sekce Výsledky, projekty, pro koho pracuji, FAQ a rozšířený ceník)
           grid-template-columns: 1fr;
         }
 
@@ -732,11 +725,15 @@
       <div class="container nav">
         <a href="#top" class="brand">Petr <span>Lapáček</span></a>
         <nav class="nav-links">
-          <a href="#vysledky">Výsledky</a>
-          <a href="#projekty">Projekty</a>
+          <a href="#o-mne">O mně</a>
           <a href="#sluzby">Služby</a>
           <a href="#ceny">Ceník</a>
+<<<<<<< HEAD
           <a href="#faq">FAQ</a>
+=======
+          <a href="#proces">Proces</a>
+          <a href="#kontakt">Kontakt</a>
+>>>>>>> parent of 26ee834 (Rozšíření webu o sekce Výsledky, projekty, pro koho pracuji, FAQ a rozšířený ceník)
           <a href="#kontakt" class="btn btn-primary">Nezávazně</a>
         </nav>
       </div>
@@ -749,14 +746,21 @@
             <span class="eyebrow">Seniorní konzultant a interim manager pro výrobní firmy</span>
             <h1>Pomáhám výrobním firmám <span class="highlight-text">zvýšit výkon, snížit ztráty a nastavit procesy pro růst</span>.</h1>
             <p>
+<<<<<<< HEAD
               Spojuji praktický pohled z výroby, logistiky, IT a managementu. Díky více než
               <span class="highlight-text">30+ let zkušeností</span> pomáhám firmám najít skutečnou příčinu problémů,
               vytvořit konkrétní plán změn a stabilizovat provoz tak, aby přinesl výsledek.
+=======
+              Pomáhám firmám zvyšovat produktivitu, snižovat náklady a digitalizovat procesy.
+              Propojuji praktické zkušenosti z výroby, interní logistiky, IT a managementu.
+              Díky více než 30 let praxe dokážu rychle najít příčinu problémů a navrhnout
+              praktická řešení, která mají reálný efekt.
+>>>>>>> parent of 26ee834 (Rozšíření webu o sekce Výsledky, projekty, pro koho pracuji, FAQ a rozšířený ceník)
             </p>
             <div class="hero-note">První seznámení je zdarma a bez závazků.</div>
 
             <div class="hero-actions">
-              <a href="#kontakt" class="btn btn-primary">Rezervovat nezávaznou konzultaci</a>
+              <a href="#kontakt" class="btn btn-primary">Domluvme si konzultaci</a>
               <a href="#sluzby" class="btn btn-light">Moje služby</a>
             </div>
 
@@ -768,6 +772,7 @@
 
             <div class="stat-strip">
               <div class="stat">
+<<<<<<< HEAD
                 <strong>30+</strong>
                 <span>let zkušeností</span>
               </div>
@@ -778,6 +783,18 @@
               <div class="stat">
                 <strong>ERP</strong>
                 <span>procesy & data</span>
+=======
+                <strong>Audit</strong>
+                <span>Logistiky a procesů</span>
+              </div>
+              <div class="stat">
+                <strong>ERP</strong>
+                <span>Výběr a implementace</span>
+              </div>
+              <div class="stat">
+                <strong>Mentor</strong>
+                <span>Management a změny</span>
+>>>>>>> parent of 26ee834 (Rozšíření webu o sekce Výsledky, projekty, pro koho pracuji, FAQ a rozšířený ceník)
               </div>
             </div>
           </div>
@@ -793,15 +810,22 @@
         <div class="container">
           <div class="section-heading">
             <span class="eyebrow">O mně</span>
-            <h2>Ne IT specialista. Ne logistický vedoucí. <span class="highlight-text">Řešitel problémů výrobních firem.</span></h2>
+            <h2>Ne IT specialista. Ne logistický vedoucí. Řešitel problémů výrobních firem.</h2>
             <p>
+<<<<<<< HEAD
               Když firmy hledají řešení, nechtějí seznam kompetencí. Hledají člověka, který dokáže identifikovat skutečnou příčinu problémů,
               navrhnout proveditelnou změnu a podpořit její realizaci v realitě provozu. Právě v tom je moje práce.
+=======
+              Když firmy hledají řešení, nechtějí seznam kompetencí. Hledají člověka, který
+              dokáže najít skutečnou příčinu problémů v provozu, navrhnout praktické řešení
+              a podpořit jeho realizaci. Právě v tom je moje práce.
+>>>>>>> parent of 26ee834 (Rozšíření webu o sekce Výsledky, projekty, pro koho pracuji, FAQ a rozšířený ceník)
             </p>
           </div>
         </div>
       </section>
 
+<<<<<<< HEAD
       <section id="vysledky">
         <div class="container">
           <div class="section-heading">
@@ -833,6 +857,8 @@
         </div>
       </section>
 
+=======
+>>>>>>> parent of 26ee834 (Rozšíření webu o sekce Výsledky, projekty, pro koho pracuji, FAQ a rozšířený ceník)
       <section>
         <div class="container">
           <div class="section-heading">
@@ -874,51 +900,6 @@
                 <li>problémy s plánováním</li>
               </ul>
             </div>
-          </div>
-        </div>
-      </section>
-
-      <section id="projekty">
-        <div class="container">
-          <div class="section-heading">
-            <span class="eyebrow">Vybrané projekty</span>
-            <h2>Řešení v praxi.</h2>
-          </div>
-
-          <div class="projects-grid">
-            <div class="project-card">
-              <h3>ERP transformace výrobní firmy</h3>
-              <p>Analýza procesů, návrh nového modelu práce, řízení změn a podpora při přechodu na nový informační systém.</p>
-            </div>
-            <div class="project-card">
-              <h3>Digitalizace pomocí Microsoft 365 a Power Platform</h3>
-              <p>Automatizace procesů, reportování, integrace nástrojů a odstranění manuálních úkonů v administrativě i výrobě.</p>
-            </div>
-            <div class="project-card">
-              <h3>Interní logistika a optimalizace výrobních toků</h3>
-              <p>Odhalení úzkých míst, návrh změn v toku materiálu, plánování a řízení zásob.</p>
-            </div>
-            <div class="project-card">
-              <h3>Vývoj vlastního ERP a CRM systému</h3>
-              <p>Návrh a implementace řešení přizpůsobeného provozu firmy, s důrazem na procesy, přehlednost a řízení dat.</p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section>
-        <div class="container">
-          <div class="section-heading">
-            <span class="eyebrow">Pro koho pracuji</span>
-            <h2>Specializuji se na firmy v produkci a logistice.</h2>
-          </div>
-
-          <div class="audience-grid">
-            <div class="audience-pill">Výrobní firmy</div>
-            <div class="audience-pill">Strojírenství</div>
-            <div class="audience-pill">Automotive</div>
-            <div class="audience-pill">Technické provozy</div>
-            <div class="audience-pill">Logistika a sklady</div>
           </div>
         </div>
       </section>
@@ -1036,11 +1017,17 @@
         <div class="container">
           <div class="section-heading">
             <span class="eyebrow">Ceník</span>
+<<<<<<< HEAD
             <h2>Jednoduché a transparentní formáty spolupráce.</h2>
+=======
+            <h2>Orientační rozmezí služeb.</h2>
+            <p>Poskytujeme služby na míru. Níže jsou orientační ceny podle typu projektu a rozsahu spolupráce.</p>
+>>>>>>> parent of 26ee834 (Rozšíření webu o sekce Výsledky, projekty, pro koho pracuji, FAQ a rozšířený ceník)
           </div>
 
           <div class="pricing-grid">
             <div class="price-card">
+<<<<<<< HEAD
               <span class="label">Audit</span>
               <h3>Diagnostika</h3>
               <div class="price">Na dotaz <small>od</small></div>
@@ -1078,12 +1065,32 @@
                 <li>Stabilizace provozu</li>
                 <li>Řízení změn</li>
                 <li>Podpora managementu</li>
+=======
+              <div class="label">Audit</div>
+              <h3>Audit interní logistiky</h3>
+              <div class="price">25 000 <small>– 80 000 Kč</small></div>
+              <ul>
+                <li>Analýza toku materiálu</li>
+                <li>Vyhodnocení KPI</li>
+                <li>Identifikace úzkých míst</li>
+                <li>Plán realizace</li>
               </ul>
             </div>
-          </div>
-        </div>
-      </section>
 
+            <div class="price-card highlight">
+              <div class="label">Digitalizace</div>
+              <h3>Audit digitalizace</h3>
+              <div class="price">30 000 <small>– 100 000 Kč</small></div>
+              <ul>
+                <li>Mapování procesů</li>
+                <li>Identifikace automatizace</li>
+                <li>Roadmapa digitalizace</li>
+                <li>Odhad investic</li>
+>>>>>>> parent of 26ee834 (Rozšíření webu o sekce Výsledky, projekty, pro koho pracuji, FAQ a rozšířený ceník)
+              </ul>
+            </div>
+
+<<<<<<< HEAD
       <section id="kontakt">
         <div class="container">
           <div class="section-heading">
@@ -1138,6 +1145,47 @@
           </div>
         </div>
       </section>
+=======
+            <div class="price-card">
+              <div class="label">ERP</div>
+              <h3>ERP a informační systémy</h3>
+              <div class="price">Na míru</div>
+              <ul>
+                <li>Externí PM</li>
+                <li>ERP konzultace</li>
+                <li>Mentoring interního týmu</li>
+                <li>Řízení dodavatele</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <div class="container">
+          <div class="quote-box">
+            <p>
+              „Pomáhám výrobním firmám odhalit a odstranit problémy v logistice, výrobě a digitalizaci.
+              Díky zkušenostem z řízení firem, výroby, IT a interní logistiky dokážu rychle najít
+              příčinu problémů a navrhnout praktická řešení.“
+            </p>
+            <small>— Petr Lapáček</small>
+          </div>
+        </div>
+      </section>
+
+      <section class="cta" id="kontakt">
+        <div class="container">
+          <div class="cta-box">
+            <div>
+              <h3>Potřebujete najít řešení pro firmu?</h3>
+              <p>První seznámení je zdarma a na jeho základě se domluvíme o dalším rozsahu spolupráce.</p>
+            </div>
+            <a href="mailto:lapacek.petr@gmail.com" class="btn btn-primary">lapacek.petr@gmail.com</a>
+          </div>
+        </div>
+      </section>
+>>>>>>> parent of 26ee834 (Rozšíření webu o sekce Výsledky, projekty, pro koho pracuji, FAQ a rozšířený ceník)
     </main>
 
     <footer>
@@ -1145,8 +1193,14 @@
         <div>Petr Lapáček © 2025</div>
         <div class="footer-links">
           <a href="#o-mne">O mně</a>
+<<<<<<< HEAD
           <a href="#vysledky">Kdy mě firmy oslovují</a>
           <a href="#sluzby">Služby</a>
+=======
+          <a href="#sluzby">Služby</a>
+          <a href="#ceny">Ceník</a>
+          <a href="#proces">Proces</a>
+>>>>>>> parent of 26ee834 (Rozšíření webu o sekce Výsledky, projekty, pro koho pracuji, FAQ a rozšířený ceník)
           <a href="#kontakt">Kontakt</a>
         </div>
       </div>
