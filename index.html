@@ -165,10 +165,9 @@
 
       .stat-strip {
         display: grid;
-        grid-template-columns: repeat(2, minmax(180px, 1fr));
+        grid-template-columns: repeat(3, minmax(140px, 1fr));
         gap: 18px;
         margin-top: 30px;
-        max-width: 500px;
       }
 
       .stat {
@@ -285,7 +284,7 @@
         box-shadow: 0 0 0 5px rgba(20,61,99,0.08);
       }
 
-      .quote-panel {
+      .highlight-box {
         background: linear-gradient(135deg, var(--primary) 0%, var(--primary-2) 100%);
         border-radius: 26px;
         padding: 30px 26px;
@@ -524,59 +523,6 @@
         border-bottom: none;
       }
 
-      .cta-group {
-        display: grid;
-        grid-template-columns: repeat(3, minmax(220px, 1fr));
-        gap: 22px;
-      }
-
-      .cta-mini {
-        background: var(--panel);
-        border: 1px solid var(--line);
-        border-radius: 22px;
-        padding: 24px 20px;
-        box-shadow: 0 8px 20px rgba(17, 26, 38, 0.04);
-      }
-
-      .cta-mini h3 {
-        margin: 0 0 10px;
-        font-size: 1.2rem;
-      }
-
-      .cta-mini p {
-        margin: 0 0 16px;
-        color: var(--muted);
-      }
-
-      .faq {
-        background: #fff;
-      }
-
-      .faq-list {
-        display: grid;
-        gap: 14px;
-      }
-
-      details {
-        background: var(--panel);
-        border: 1px solid var(--line);
-        border-radius: 18px;
-        padding: 18px 20px;
-      }
-
-      summary {
-        cursor: pointer;
-        list-style: none;
-        font-weight: 700;
-      }
-
-      summary::-webkit-details-marker { display: none; }
-
-      details p {
-        margin: 12px 0 0;
-        color: var(--muted);
-      }
-
       .cta-box {
         background: var(--panel);
         border: 1px solid var(--line);
@@ -622,23 +568,21 @@
 
       @media (max-width: 980px) {
         .hero-grid,
+        .issue-list,
         .problem-grid,
         .projects-grid,
         .audience-grid,
         .services-grid,
         .steps,
         .pricing-grid,
-        .cta-group,
-        .cta-box,
-        .issue-list {
+        .cta-box {
           grid-template-columns: 1fr;
         }
 
         .projects-grid,
         .audience-grid,
         .services-grid,
-        .pricing-grid,
-        .cta-group {
+        .pricing-grid {
           grid-template-columns: repeat(2, minmax(220px, 1fr));
         }
 
@@ -681,14 +625,13 @@
         }
 
         .stat-strip,
+        .issue-list,
         .problem-grid,
         .projects-grid,
         .audience-grid,
         .services-grid,
         .steps,
-        .pricing-grid,
-        .cta-group,
-        .issue-list {
+        .pricing-grid {
           grid-template-columns: 1fr;
         }
 
@@ -703,7 +646,7 @@
       <div class="container nav">
         <a href="#top" class="brand">Petr <span>Lapáček</span></a>
         <nav class="nav-links">
-          <a href="#kdy-me-firmy-oslovuji">Kdy mě oslovují</a>
+          <a href="#vysledky">Kdy mě oslovují</a>
           <a href="#projekty">Projekty</a>
           <a href="#sluzby">Služby</a>
           <a href="#ceny">Ceník</a>
@@ -739,7 +682,11 @@
               </div>
               <div class="stat">
                 <strong>ERP</strong>
-                <span>procesy, data a změny</span>
+                <span>procesy & data</span>
+              </div>
+              <div class="stat">
+                <strong>Audit</strong>
+                <span>z vývoje a provozu</span>
               </div>
             </div>
           </div>
@@ -764,7 +711,7 @@
         </div>
       </section>
 
-      <section id="kdy-me-firmy-oslovuji">
+      <section id="vysledky">
         <div class="container">
           <div class="section-heading">
             <span class="eyebrow">Kdy mě firmy oslovují</span>
@@ -795,7 +742,7 @@
             </p>
           </div>
 
-          <div class="quote-panel">Výroba, logistika a IT nejsou oddělené světy. Největší přínos často vzniká právě na jejich rozhraní.</div>
+          <div class="highlight-box">Výroba, logistika a IT nejsou oddělené světy. Největší přínos často vzniká právě na jejich rozhraní.</div>
         </div>
       </section>
 
