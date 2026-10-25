@@ -815,12 +815,116 @@
 
     </div>
 
-    <div class="issue-list" style="margin:40px 0;">
-      <div class="issue-item">Výroba hledá příčinu problému v logistice.</div>
-      <div class="issue-item">Logistika v informačním systému.</div>
-      <div class="issue-item">IT v procesech.</div>
-      <div class="issue-item">Management v lidech.</div>
-    </div>
+    <svg width="800" height="500" viewBox="0 0 800 500" xmlns="http://www.w3.org/2000/svg">
+
+  <defs>
+    <style>
+      .node {
+        fill: #ffffff;
+        stroke: #143d63;
+        stroke-width: 3;
+      }
+
+      .center {
+        fill: #143d63;
+      }
+
+      .title {
+        font-family: Arial, sans-serif;
+        font-size: 20px;
+        font-weight: bold;
+        fill: #143d63;
+        text-anchor: middle;
+      }
+
+      .centerText {
+        font-family: Arial, sans-serif;
+        font-size: 18px;
+        font-weight: bold;
+        fill: white;
+        text-anchor: middle;
+      }
+
+      .arrow {
+        stroke: #275d8d;
+        stroke-width: 4;
+        fill: none;
+        marker-end: url(#arrowhead);
+      }
+
+      .sub {
+        font-family: Arial, sans-serif;
+        font-size: 14px;
+        fill: #5f6f85;
+        text-anchor: middle;
+      }
+    </style>
+
+    <marker id="arrowhead"
+            markerWidth="10"
+            markerHeight="7"
+            refX="9"
+            refY="3.5"
+            orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#275d8d"/>
+    </marker>
+  </defs>
+
+  <!-- Střed -->
+  <circle cx="400" cy="250" r="90" class="center"/>
+
+  <text x="400" y="235" class="centerText">
+    Skutečná
+  </text>
+  <text x="400" y="260" class="centerText">
+    příčina
+  </text>
+  <text x="400" y="285" class="centerText">
+    problému
+  </text>
+
+  <!-- Výroba -->
+  <rect x="320" y="30" width="160" height="70" rx="15" class="node"/>
+  <text x="400" y="72" class="title">Výroba</text>
+
+  <!-- Logistika -->
+  <rect x="580" y="215" width="160" height="70" rx="15" class="node"/>
+  <text x="660" y="257" class="title">Logistika</text>
+
+  <!-- IT -->
+  <rect x="320" y="400" width="160" height="70" rx="15" class="node"/>
+  <text x="400" y="442" class="title">IT</text>
+
+  <!-- Management -->
+  <rect x="60" y="215" width="180" height="70" rx="15" class="node"/>
+  <text x="150" y="257" class="title">Management</text>
+
+  <!-- Šipky dovnitř -->
+  <line x1="400" y1="100" x2="400" y2="155" class="arrow"/>
+  <line x1="580" y1="250" x2="495" y2="250" class="arrow"/>
+  <line x1="400" y1="400" x2="400" y2="345" class="arrow"/>
+  <line x1="240" y1="250" x2="305" y2="250" class="arrow"/>
+
+  <!-- Popisky -->
+  <text x="400" y="15" class="sub">
+    Hledá příčinu v logistice
+  </text>
+
+  <text x="760" y="250" class="sub"
+        transform="rotate(90,760,250)">
+    Hledá příčinu v IT
+  </text>
+
+  <text x="400" y="495" class="sub">
+    Hledá příčinu v procesech
+  </text>
+
+  <text x="40" y="250" class="sub"
+        transform="rotate(-90,40,250)">
+    Hledá příčinu v lidech
+  </text>
+
+</svg>
 
     <div class="section-heading">
 
